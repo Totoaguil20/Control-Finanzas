@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Finanzas Personales</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="funciones.js"></script> <!-- Enlace a una hoja de estilos CSS para personalizar la apariencia -->
+</head>
+<body>
+  <header>
+    <h1>Gestion de Finanzas</h1>
+  </header>
+
+  <div class="saldo">
+    <h3 class="saldotitulo">Saldo</h3>
+    <h1 id = "saldo">$0.00</h1>
+    <div class="datos">
+      <div class="columna">
+        <div class="ingresos">
+          <p>Ingresos</p>
+          <p id="ingresos">$0.00</p>
+        </div>
+      </div>
+      <div class="columna">
+        <div class="gastos">
+          <p>Gastos</p>
+          <p id="gastos">$0.00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="historial">
+    <div class="movimientos">
+      <h3 class="movimiento">Movimientos</h3>
+    </div>
+    <div   id="tablaMovimientos" class="tabla">
+      
+      
+    </div>
+  </div>
+  
+  <div id="formulario" class="menu hidden">
+    <div class="tituloDatos">
+      <h2>Ingrese datos</h2>
+    </div>
+    <h2 id="formularioTitulo"></h2>
+    <form id="movimientoForm" onsubmit="registrarMovimiento(event)">
+
+      <label for="tipo">Tipo:</label>
+      <select id="tipo">
+        <option value="Ingreso">Ingreso</option>
+        <option value="Gasto">Gasto</option>
+      </select>
+      <label for="cantidad">Cantidad:</label>
+      <input type="number" id="cantidad" required>
+
+      <label for="descripcion">Descripcion:</label>
+      <input type="text" id="descripcion" required>
+      
+      
+      <label for="fecha">Fecha:</label>
+      <input type="date" id="fecha" required>
+     
+      <button type="submit">Guardar</button>
+      <button id="botonCancelar" class="button" type="button" onclick="ocultarFormulario()">Cancelar</button>
+    </form>
+  </div>
+  
+  <section id="options">
+    <button id="botonIngresar" class="option-link" onclick="abrirFormulario()">Ingresar datos</button>
+    <button href="generar-informes.html" class="option-link">Generar Informes</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Gestión de Finanzas Personales. Todos los derechos reservados a Martin Aguilera.</p>
+    <nav>
+      <a href="politica-privacidad.html">Política de Privacidad</a>
+      <a href="terminos-uso.html">Términos de Uso</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </footer>
+
+  
+</body>
+</html>
+

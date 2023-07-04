@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control de Gastos</title>
+  <link rel="stylesheet" href="style.css"> <!-- Enlace a una hoja de estilos CSS -->
+</head>
+<body>
+  <header>
+    <h1>Control de Gastos</h1>
+  </header> 
+
+  <div class="container">
+    <section id="generar-informes">
+        <h2>Generar Informes</h2>
+        <button type="button" onclick="generarInformes()">Generar Informes</button>
+        <button type="button" onclick="calcularBalanceNeto()">Calcular Balance Neto</button>
+      
+        <div id="informes">
+          <!-- Los informes se mostrarán aquí -->
+        </div>
+      
+        <div id="balance-neto">
+          <!-- El balance neto se mostrará aquí -->
+        </div>
+      </section>
+       
+  </div>
+  <footer>
+    <p>&copy; 2023 Gestión de Finanzas Personales. Todos los derechos reservados a Martin Aguilera.</p>
+    <nav>
+      <a href="politica-privacidad.html">Política de Privacidad</a>
+      <a href="terminos-uso.html">Términos de Uso</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </footer>
+
+  <script src="funciones.js"></script> <!-- Enlace al archivo JavaScript -->
+</body>
+</html>
